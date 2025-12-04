@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Somos — Unión Nacional de Artistas</title>
+
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="theme-color" content="#000000" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Switzer','system-ui','sans-serif'] },
+          animation: { spinSlower: 'spin 24s linear infinite' }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+
+    html, body { background:#000000 !important; color:#FFFFFF; }
+    html { scroll-behavior:smooth; }
+    
+    .button-54 {
+      font-family: 'Switzer', system-ui, sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      cursor: pointer;
+      border: 3px solid;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      background: transparent;
+    }
+
+    .button-54:active {
+      box-shadow: 0px 0px 0px 0px;
+      top: 5px;
+      left: 5px;
+    }
+
+    @media (min-width: 768px) {
+      .button-54 {
+        padding: 0.25em 0.75em;
+      }
+    }
+
+    .button-28 {
+      appearance: none;
+      background-color: transparent;
+      border: 2px solid #1A1A1A;
+      border-radius: 15px;
+      box-sizing: border-box;
+      color: #3B3B3B;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+      min-height: 60px;
+      min-width: 0;
+      outline: none;
+      padding: 16px 24px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: 100%;
+      will-change: transform;
+    }
+
+    .button-28:disabled {
+      pointer-events: none;
+    }
+
+    .button-28:hover {
+      color: #fff;
+      background-color: #1A1A1A;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+      transform: translateY(-2px);
+    }
+
+    .button-28:active {
+      box-shadow: none;
+      transform: translateY(0);
+    }
+
+    #qs-organizaciones img { border-radius: 9999px; }
+
+    #qs-directiva .p-4 img { transition: transform .2s ease; will-change: transform; }
+    #qs-directiva .p-4:hover img { transform: scale(1.12); }
+  </style>
+</head>
+
+<body class="bg-black font-sans antialiased" id="top">
+  <!-- NAVBAR (mismo en todas las páginas) -->
+  <header class="sticky top-0 z-50 bg-[#7F2D87] text-white">
+    <nav class="max-w-7xl mx-auto px-6 sm:px-8" style="font-family:'Switzer','system-ui','sans-serif;">
+      <div class="h-16 flex items-center justify-between">
+        <a href="index.html#top" class="group flex items-center gap-2 sm:gap-3">
+          <span class="tracking-wide font-black text-[12px] sm:text-sm select-none uppercase">UNIÓN NACIONAL DE ARTISTAS</span>
+          <img src="assets/img/logo-una.png" alt="Sol UNA" class="h-5 w-5 sm:h-6 sm:w-6 animate-spinSlower" />
+        </a>
+
+        <div class="flex items-center gap-6">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wide text-white/90">
+            <a href="index.html#top" class="hover:text-white transition">Inicio</a>
+            <a href="somos.html" class="hover:text-white transition underline underline-offset-4">Somos</a>
+            <a href="actividades.html" class="hover:text-white transition">Actividades</a>
+            <a href="index.html#revista" class="hover:text-white transition">Revista</a>
+            <a href="index.html#contacto" class="hover:text-white transition">Contacto</a>
+          </div>
+
+          <div class="hidden sm:block h-4 w-px bg-white/30"></div>
+
+          <div class="hidden sm:flex items-center gap-4 text-white/90">
+            <a href="https://web.facebook.com/artistasuna" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/una.artistas/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="mailto:contacto@unionnacionaldeartistas.cl" aria-label="Mail" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+                <polyline points="3 7 12 13 21 7"/>
+              </svg>
+            </a>
+            <a href="https://x.com/artistasuna" target="_blank" rel="noopener" aria-label="X" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4l16 16"/><path d="M20 4 4 20"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tabs-somos" class="w-full bg-black">
+      <div class="max-w-5xl mx-auto px-6 pt-16">
+        <div class="flex flex-wrap justify-center gap-3 text-base font-semibold uppercase tracking-wide">
+          <button data-tab="que-somos" data-active-color="#7F2D87" data-hover-color="#7F2D87" class="tab-btn button-54 inline-flex items-center">Qué&nbsp;somos</button>
+          <button data-tab="que-hacemos" data-active-color="#F49C21" data-hover-color="#F49C21" class="tab-btn button-54 inline-flex items-center">Qué&nbsp;hacemos</button>
+          <button data-tab="quienes-somos" data-active-color="#F2D245" data-hover-color="#F2D245" class="tab-btn button-54 inline-flex items-center">Quiénes&nbsp;somos</button>
+          <button data-tab="historia" data-active-color="#7F2D87" data-hover-color="#9CA3AF" class="tab-btn button-54 inline-flex items-center">Historia</button>
+        </div>
+
+        <div id="panel-que-somos" class="mt-8">
+          <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
+          <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4"
+              style="font-family:'Recia','Switzer','system-ui',sans-serif">QUE SOMOS</h1>
+          <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl">
+            <br>
+La Unión Nacional de Artistas es una organización multigremial, conformada por diferentes gremios, sindicatos y sociedades de gestión, de artistas y creadores chilenos, de todas las disciplinas artísticas.
+
+Nace en 2012 con el objetivo de defender la libertad de creación y de expresión, con especial énfasis en la protección de los derechos de autor; el fomento al desarrollo y cultural del país; y la promoción del respeto a los derechos de los artistas y la dignidad de su oficio.
+
+La UNA es conducida por un Directorio, compuesto por 10 miembros representantes en partes iguales, de las organizaciones de gestión de derechos intelectuales y de las asociaciones gremiales de distintas disciplinas, entre ellas, literatura, música, teatro, artes audiovisuales, artes visuales y danza.
+          </p>
+        </div>
+
+        <div id="panel-que-hacemos" class="mt-8 hidden">
+          <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
+          <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4"
+              style="font-family:'Recia','Switzer','system-ui',sans-serif">QUÉ HACEMOS</h1>
+          <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl">
+            <br>
+Participamos activamente en el debate de políticas públicas destinadas al desarrollo del arte, la cultura y el patrimonio (Leyes de Derecho Autor y Propiedad Intelectual, 20% Música, Ley Teloneros, Derechos Conexos Actores, Ley Ricardo Larraín y Ley Balme, entre otras).
+
+Desarrollamos proyectos e iniciativas específicas de difusión artística y cultural, de fomento de la educación y del debate público en torno a las culturas.
+
+Generamos redes y acuerdos de colaboración.
+
+Fomentamos la organización del sector cultural.
+          </p>
+        </div>
+
+        <div id="panel-historia" class="mt-8 hidden">
+          <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
+          <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4"
+              style="font-family:'Recia','Switzer','system-ui',sans-serif">HISTORIA</h1>
+          <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl">
+            Próximamente: contenido de la historia de la UNA.
+          </p>
+        </div>
+
+        <div id="panel-quienes-somos" class="mt-8 hidden">
+          <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
+          <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4 text-center whitespace-nowrap"
+              style="font-family:'Recia','Switzer','system-ui',sans-serif">QUIÉNES SOMOS</h1>
+<br>
+
+          <div class="space-y-6">
+            <nav class="flex flex-wrap items-center justify-center gap-2 text-white uppercase font-black text-[13px] sm:text-sm">
+              <button type="button" data-sub="organizaciones" data-active-color="#7F2D87" data-hover-color="#7F2D87" class="button-54" style="width:auto; font-size:14px; padding:0.20em 0.55em; border-width:2px">Organizaciones</button>
+              <button type="button" data-sub="directiva" data-active-color="#F49C21" data-hover-color="#F49C21" class="button-54" style="width:auto; font-size:14px; padding:0.20em 0.55em; border-width:2px">Directorio</button>
+            </nav>
+
+            <div>
+              <div id="qs-organizaciones">
+                <h2 class="text-xl sm:text-2xl font-black uppercase mb-4" style="font-family:'Recia','Switzer','system-ui',sans-serif">Organizaciones</h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/ADCULTURA.jpg" alt="ADCULTURA" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">ADCULTURA</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/ADG.jpg" alt="ADG" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">ADG</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/ADOC.png" alt="ADOC" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">ADOC</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/AFLACH.jpg" alt="AFLACH" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">AFLACH</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/APECH.jpg" alt="APECH" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">APECH</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/ATN.png" alt="ATN" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">ATN</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/CONATEMUCH.png" alt="CONATEMUCH" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">CONATEMUCH</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/CRIN.png" alt="CRIN" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">CRIN</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/Centro Arte Alameda.png" alt="Centro Arte Alameda" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">Centro Arte Alameda</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/CreaImagen.jpg" alt="CreaImagen" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">CreaImagen</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/EL CIRCO DEL MUNDO.png" alt="EL CIRCO DEL MUNDO" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">EL CIRCO DEL MUNDO</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/Fundación Títeres en Red.jpg" alt="Fundación Títeres en Red" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">Fundación Títeres en Red</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/Letras Laicas.jpg" alt="Letras Laicas" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">Letras Laicas</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/SADEL.jpg" alt="SADEL" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">SADEL</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/SCD.jpg" alt="SCD" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">SCD</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/SECH.png" alt="SECH" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">SECH</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/SIDARTE.webp" alt="SIDARTE" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">SIDARTE</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <div class="h-16 bg-white rounded-md grid place-items-center">
+                      <img src="assets/img/logos-org/SINATTAD.jpg" alt="SINATTAD" class="max-h-16 max-w-full object-contain" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">SINATTAD</p>
+                  </a>
+                </div>
+              </div>
+
+              <div id="qs-directiva" class="hidden">
+                <h2 class="text-xl sm:text-2xl font-black uppercase mb-4" style="font-family:'Recia','Switzer','system-ui',sans-serif">Directorio</h2>
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl mb-6">Directorio con fotos.</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Mario Rojas.jpeg" alt="Mario Rojas" class="h-24 w-24 mx-auto rounded-full object-cover" style="object-position:50% 70%" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Mario Rojas</p>
+                    <p class="text-xs text-gray-300 text-center">Presidente</p>
+                    <p class="text-xs text-gray-300 text-center">SCD</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Jorge Calvo.jpeg" alt="Jorge Calvo" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Jorge Calvo</p>
+                    <p class="text-xs text-gray-300 text-center">Vicepresidente</p>
+                    <p class="text-xs text-gray-300 text-center">SECH</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Beatriz Rosselot.JPG" alt="Beatriz Rosselot" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Beatriz Rosselot</p>
+                    <p class="text-xs text-gray-300 text-center">Secretaria</p>
+                    <p class="text-xs text-gray-300 text-center">ATN</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Daniel Miranda.jpg" alt="Daniel Miranda" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Daniel Miranda</p>
+                    <p class="text-xs text-gray-300 text-center">Vicepresidente</p>
+                    <p class="text-xs text-gray-300 text-center">ADOC</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Alex Chellew.jpg" alt="Alex Chellew" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Alex Chellew</p>
+                    <p class="text-xs text-gray-300 text-center">Tesorero</p>
+                    <p class="text-xs text-gray-300 text-center">APECH</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/marjorie.jpeg" alt="Marjorie Ávalos" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Marjorie Ávalos</p>
+                    <p class="text-xs text-gray-300 text-center">SINATTAD</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Ernesto Orellana.jpeg" alt="Ernesto Orellana" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Ernesto Orellana</p>
+                    <p class="text-xs text-gray-300 text-center">SIDARTE</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Arturo Duclos.jpeg" alt="Arturo Duclos" class="h-[104px] w-[104px] mx-auto rounded-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='assets/img/logos-org/CreaImagen.jpg'">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Arturo Duclos</p>
+                    <p class="text-xs text-gray-300 text-center">Crea Imagen</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Ale-Jimenez.jpeg" alt="Alejandra Jiménez" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Alejandra Jiménez</p>
+                    <p class="text-xs text-gray-300 text-center">Directora Ejecutiva</p>
+                    <p class="text-xs text-gray-300 text-center">UNA</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </div>
+    </section>
+
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var buttons = document.querySelectorAll('[data-tab]');
+      var tabsSection = document.getElementById('tabs-somos');
+      var panels = {
+        'que-somos': document.getElementById('panel-que-somos'),
+        'que-hacemos': document.getElementById('panel-que-hacemos'),
+        'quienes-somos': document.getElementById('panel-quienes-somos'),
+        'historia': document.getElementById('panel-historia')
+      };
+      var subButtons = document.querySelectorAll('[data-sub]');
+      var subPanels = {
+        'organizaciones': document.getElementById('qs-organizaciones'),
+        'directiva': document.getElementById('qs-directiva')
+      };
+
+      function showMain(name){
+        tabsSection.classList.remove('hidden');
+        Object.keys(panels).forEach(function(k){
+          var el = panels[k];
+          if(!el) return;
+          el.classList.toggle('hidden', !(k==='que-somos' || k==='que-hacemos' || k==='quienes-somos' || k==='historia'));
+        });
+        Object.keys(panels).forEach(function(k){
+          if(!panels[k]) return;
+          panels[k].classList.toggle('hidden', !(k===name));
+        });
+        buttons.forEach(function(b){
+          var active = b.getAttribute('data-tab')===name;
+          b.classList.toggle('ring-2', active);
+          b.classList.toggle('ring-black/30', active);
+          var col = b.getAttribute('data-active-color');
+          if(active && col){
+            b.style.color = col;
+            b.style.borderColor = col;
+          } else {
+            b.style.color = '#FFFFFF';
+            b.style.borderColor = '#FFFFFF';
+          }
+        });
+        if(name==='quienes-somos'){
+          showSub('organizaciones');
+        }
+      }
+
+      function showSub(key){
+        Object.keys(subPanels).forEach(function(k){
+          var el = subPanels[k];
+          if(!el) return;
+          el.classList.toggle('hidden', k!==key);
+        });
+        subButtons.forEach(function(b){
+          var active = b.getAttribute('data-sub')===key;
+          b.classList.toggle('ring-2', active);
+          b.classList.toggle('ring-black/30', active);
+          var col = b.getAttribute('data-active-color');
+          if(active && col){
+            b.style.color = col;
+            b.style.borderColor = col;
+          } else {
+            b.style.color = '#FFFFFF';
+            b.style.borderColor = '#FFFFFF';
+          }
+        });
+      }
+
+      function setFromHash(){
+        var hash = (location.hash || '').replace('#','');
+        if(!hash){
+          showMain('que-somos');
+          return;
+        }
+        if(hash==='que-somos' || hash==='que-hacemos' || hash==='quienes-somos' || hash==='historia'){
+          showMain(hash);
+          return;
+        }
+        if(hash==='organizaciones' || hash==='directiva'){
+          showMain('quienes-somos');
+          showSub(hash);
+          return;
+        }
+        showMain('que-somos');
+      }
+
+      buttons.forEach(function(b){
+        b.addEventListener('click', function(){
+          var name = b.getAttribute('data-tab');
+          location.hash = name;
+          setFromHash();
+        });
+        b.addEventListener('mouseenter', function(){
+          var activeName = Object.keys(panels).find(function(k){
+            var el = panels[k];
+            return el && !el.classList.contains('hidden');
+          });
+          var isActive = b.getAttribute('data-tab')===activeName;
+          if(isActive) return;
+          var hc = b.getAttribute('data-hover-color');
+          if(hc){ b.style.color = hc; b.style.borderColor = hc; }
+        });
+        b.addEventListener('mouseleave', function(){
+          var activeName = Object.keys(panels).find(function(k){
+            var el = panels[k];
+            return el && !el.classList.contains('hidden');
+          });
+          var isActive = b.getAttribute('data-tab')===activeName;
+          if(isActive) return;
+          b.style.color = '#FFFFFF';
+          b.style.borderColor = '#FFFFFF';
+        });
+      });
+
+      subButtons.forEach(function(b){
+        b.addEventListener('click', function(){
+          var key = b.getAttribute('data-sub');
+          location.hash = key;
+          setFromHash();
+        });
+        b.addEventListener('mouseenter', function(){
+          var activeKey = Object.keys(subPanels).find(function(k){
+            var el = subPanels[k];
+            return el && !el.classList.contains('hidden');
+          });
+          var isActive = b.getAttribute('data-sub')===activeKey;
+          if(isActive) return;
+          var hc = b.getAttribute('data-hover-color');
+          if(hc){ b.style.color = hc; b.style.borderColor = hc; }
+        });
+        b.addEventListener('mouseleave', function(){
+          var activeKey = Object.keys(subPanels).find(function(k){
+            var el = subPanels[k];
+            return el && !el.classList.contains('hidden');
+          });
+          var isActive = b.getAttribute('data-sub')===activeKey;
+          if(isActive) return;
+          b.style.color = '#FFFFFF';
+          b.style.borderColor = '#FFFFFF';
+        });
+      });
+
+      window.addEventListener('hashchange', setFromHash);
+      setFromHash();
+    });
+  </script>
+</body>
+</html>

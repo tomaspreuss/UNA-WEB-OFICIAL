@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UNA — Unión Nacional de Artistas</title>
+
+  <!-- No indexación -->
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Switzer','system-ui','sans-serif'] },
+          animation: { spinSlower: 'spin 24s linear infinite' }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fuentes -->
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+  <style>
+
+    html, body { color:#FFFFFF; }
+    body{
+      background-color:#000000;
+      background-image:
+        linear-gradient(rgba(156,163,175,0.30), rgba(156,163,175,0.22)),
+        url('assets/img/fondo1.jpeg');
+      background-size:cover; background-repeat:no-repeat; background-position:center; background-attachment:fixed;
+    }
+    html { scroll-behavior:smooth; }
+    
+    .frame { width:100%; height:calc(100dvh - 4rem); border:0; }
+
+    .btn-negro{
+      display:inline-flex; align-items:center; justify-content:center;
+      background:#000; color:#fff; padding:.75rem 1.25rem; border-radius:.5rem;
+      font-weight:600; text-transform:uppercase; letter-spacing:.05em; transition:all .25s;
+    }
+    .btn-negro:hover{ background:#222; transform:translateY(-1px); box-shadow:0 8px 20px rgba(0,0,0,.15); }
+    @keyframes fadeInUp{0%{opacity:0;transform:translateY(6px)}100%{opacity:1;transform:translateY(0)}}
+    .animate-fadeInUp{animation:fadeInUp .18s ease-out both}
+    .button-54 {
+      font-family: 'Switzer', system-ui, sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      cursor: pointer;
+      border: 3px solid;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      background: transparent;
+    }
+    .button-54:active { box-shadow: 0px 0px 0px 0px; top: 5px; left: 5px; }
+    @media (min-width: 768px) { .button-54 { padding: 0.25em 0.75em; } }
+  </style>
+</head>
+
+<body class="bg-black font-sans antialiased" id="top">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-black text-white">
+    <nav class="max-w-7xl mx-auto px-6 sm:px-8" style="font-family:'Switzer','system-ui','sans-serif;">
+      <!-- CONTENEDOR DEL NAV -->
+      <div class="py-4 sm:py-5 flex flex-col gap-y-5">
+
+        <!-- FILA 1: TÍTULO + SOL (CENTRADO) + ICONOS (DERECHA) -->
+        <div class="relative flex items-center justify-center pb-1 sm:pb-2">
+          <!-- Marca centrada -->
+          <a href="#top" class="group flex items-center justify-center gap-2 sm:gap-3 px-2 py-1 rounded transition hover:bg-white hover:text-black">
+            <span class="tracking-wide font-black text-[12px] sm:text-sm select-none uppercase text-center">
+              UNIÓN NACIONAL DE ARTISTAS
+            </span>
+
+            <img src="assets/img/logo-una.png" alt="Sol UNA"
+                 class="h-5 w-5 sm:h-6 sm:w-6 animate-spinSlower" />
+          </a>
+
+          <!-- Iconos a la derecha (solo desktop) -->
+          <div class="hidden sm:flex items-center gap-4 text-white/90
+                      absolute right-0 top-1/2 -translate-y-1/2">
+
+            <!-- Facebook -->
+            <a href="https://web.facebook.com/artistasuna" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                   stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/una.artistas/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                   stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+
+            <!-- Mail -->
+            <a href="mailto:contacto@unionnacionaldeartistas.cl" aria-label="Mail" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                   stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+                <polyline points="3 7 12 13 21 7"/>
+              </svg>
+            </a>
+
+            <!-- X -->
+            <a href="https://x.com/artistasuna" target="_blank" rel="noopener" aria-label="X" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                   stroke-linejoin="round">
+                <path d="M4 4l16 16"/><path d="M20 4 4 20"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!--
+        <div class="w-full">
+          <div class="grid grid-cols-3 md:grid-cols-6 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-white/90">
+
+            <div class="relative group">
+              <a href="index.html#top"
+                 class="block py-3 text-center hover:text-white hover:bg-white/5 transition">Inicio</a>
+              <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:mt-1">
+                <div class="bg-white text-black rounded-b-xl shadow-lg px-6 py-4 text-xs min-w-[220px]">
+                  <a href="#top" class="block py-1 hover:underline">Portada</a>
+                  <a href="#revista" class="block py-1 hover:underline">Acceso rápido a Revista</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <a href="somos.html"
+                 class="block py-3 text-center hover:text-white hover:bg-white/5 transition">Somos</a>
+              <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:mt-1">
+                <div class="bg-white text-black rounded-b-xl shadow-lg px-6 py-4 text-xs min-w-[220px]">
+                  <a href="somos.html#que-somos" class="block py-1 hover:underline">Qué somos</a>
+                  <a href="somos.html#que-hacemos" class="block py-1 hover:underline">Qué hacemos</a>
+                  <a href="somos.html#quienes-somos" class="block py-1 hover:underline">Quiénes somos</a>
+                  <a href="somos.html#directiva" class="block py-1 hover:underline">Directiva</a>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <a href="actividades.html"
+                 class="block py-3 text-center hover:text-white hover:bg-white/5 transition">Actividades</a>
+              <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:mt-1">
+                <div class="bg-white text-black rounded-b-xl shadow-lg px-6 py-4 text-xs min-w-[220px]">
+                  <a href="actividades.html#agenda" class="block py-1 hover:underline">Agenda</a>
+                  <a href="actividades.html#convocatorias" class="block py-1 hover:underline">Convocatorias</a>
+                  <a href="actividades.html#proyectos" class="block py-1 hover:underline">Proyectos en curso</a>
+                  <a href="actividades.html#archivo" class="block py-1 hover:underline">Archivo de actividades</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <a href="index.html#revista"
+                 class="block py-3 text-center hover:text-white hover:bg-white/5 transition">Revista</a>
+              <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:mt-1">
+                <div class="bg-white text-black rounded-b-xl shadow-lg px-6 py-4 text-xs min-w-[220px]">
+                  <a href="#revista" class="block py-1 hover:underline">Última edición</a>
+                  <a href="https://online.fliphtml5.com/jyqrl/jjwz/#p=2" target="_blank" class="block py-1 hover:underline">Ver en pestaña nueva</a>
+                  <a href="revista_archivo.html" class="block py-1 hover:underline">Archivo de números</a>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <div class="relative group">
+              <a href="index.html#contacto"
+                 class="block py-3 text-center hover:text-white hover:bg-white/5 transition">Contacto</a>
+              <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:mt-1">
+                <div class="bg-white text-black rounded-b-xl shadow-lg px-6 py-4 text-xs min-w-[220px]">
+                  <a href="#contacto" class="block py-1 hover:underline">Datos de contacto</a>
+                  <a href="#" onclick="return false" aria-disabled="true" class="block py-1 hover:underline">Transparencia</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        -->
+
+        <!-- ICONOS EN MOBILE (debajo, centrados) -->
+        <div class="flex sm:hidden items-center justify-center gap-4 text-white/90">
+
+          <!-- Facebook -->
+          <a href="https://web.facebook.com/artistasuna" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-white transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                 stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/una.artistas/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-white transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                 stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+
+          <!-- Mail -->
+          <a href="mailto:contacto@unionnacionaldeartistas.cl" aria-label="Mail" class="hover:text-white transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                 stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+              <polyline points="3 7 12 13 21 7"/>
+            </svg>
+          </a>
+
+          <!-- X -->
+          <a href="https://x.com/artistasuna" target="_blank" rel="noopener" aria-label="X" class="hover:text-white transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                 stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M4 4l16 16"/><path d="M20 4 4 20"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <div class="sticky top-14 sm:top-16 z-40 bg-white/95 backdrop-blur-sm border-b border-black/10 shadow-sm">
+    <nav class="max-w-7xl mx-auto px-6 sm:px-8">
+      <div class="grid grid-cols-3 md:grid-cols-6 text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-black">
+        <div class="relative group">
+          <a href="index.html#top" class="relative block py-3 text-center transition hover:text-white hover:bg-[#F49C21] focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-current after:rounded-full after:transition-all group-hover:after:w-10">Inicio</a>
+          <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:top-full z-50">
+            <div class="text-white rounded-b-xl shadow-xl ring-1 ring-black/10 border-t-2 border-[#F49C21] px-6 py-4 text-xs min-w-[220px]" style="background-color: rgba(244,156,33,0.55)">
+              <a href="#top" class="block py-1 hover:underline">Portada</a>
+              <a href="#revista" class="block py-1 hover:underline">Acceso rápido a Revista</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="somos.html" class="relative block py-3 text-center transition hover:text-white hover:bg-[#7F2D87] focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-current after:rounded-full after:transition-all group-hover:after:w-10">Somos</a>
+          <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:top-full z-50">
+            <div class="text-white rounded-b-xl shadow-xl ring-1 ring-black/10 border-t-2 border-[#7F2D87] px-6 py-4 text-xs min-w-[220px]" style="background-color: rgba(127,45,135,0.55)">
+              <a href="somos.html#que-somos" class="block py-1 hover:underline">Qué somos</a>
+              <a href="somos.html#que-hacemos" class="block py-1 hover:underline">Qué hacemos</a>
+              <a href="somos.html#quienes-somos" class="block py-1 hover:underline">Quiénes somos</a>
+              <a href="somos.html#historia" class="block py-1 hover:underline">Historia</a>
+              <a href="somos.html#organizaciones" class="block py-1 hover:underline">Organizaciones</a>
+              <a href="somos.html#directiva" class="block py-1 hover:underline">Directorio</a>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="actividades.html" class="relative block py-3 text-center transition hover:text-white hover:bg-[#F2D245] focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-current after:rounded-full after:transition-all group-hover:after:w-10">Actividades</a>
+          <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:top-full z-50">
+            <div class="text-white rounded-b-xl shadow-xl ring-1 ring-black/10 border-t-2 border-[#F2D245] px-6 py-4 text-xs min-w-[220px]" style="background-color: rgba(242,210,69,0.55)">
+              <a href="actividades.html#agenda" class="block py-1 hover:underline">Agenda</a>
+              <a href="actividades.html#proyectos" class="block py-1 hover:underline">Proyectos en curso</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="relative group">
+          <a href="index.html#revista" class="relative block py-3 text-center transition hover:text-white hover:bg-[#F49C21] focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-current after:rounded-full after:transition-all group-hover:after:w-10">Revista</a>
+          <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:top-full z-50">
+            <div class="text-white rounded-b-xl shadow-xl ring-1 ring-black/10 border-t-2 border-[#F49C21] px-6 py-4 text-xs min-w-[220px]" style="background-color: rgba(244,156,33,0.55)">
+              <a href="#revista" class="block py-1 hover:underline">Última edición</a>
+              <a href="https://online.fliphtml5.com/jyqrl/jjwz/#p=2" target="_blank" class="block py-1 hover:underline">Ver en pestaña nueva</a>
+              <a href="#revista" class="block py-1 hover:underline">Todas las ediciones</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="convenios.html" class="relative block py-3 text-center transition hover:text-white hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-current after:rounded-full after:transition-all group-hover:after:w-10">Convenios</a>
+        </div>
+
+        <div class="relative group">
+          <a href="index.html#contacto" class="relative block py-3 text-center transition hover:text-white hover:bg-[#F2D245] focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-current after:rounded-full after:transition-all group-hover:after:w-10">Contacto</a>
+          <div class="hidden md:group-hover:block md:absolute md:left-1/2 md:-translate-x-1/2 md:top-full z-50">
+            <div class="text-white rounded-b-xl shadow-xl ring-1 ring-black/10 border-t-2 border-[#F2D245] px-6 py-4 text-xs min-w-[220px]" style="background-color: rgba(242,210,69,0.55)">
+              <a href="#contacto" class="block py-1 hover:underline">Datos de contacto</a>
+              <a href="#" onclick="return false" aria-disabled="true" class="block py-1 hover:underline">Transparencia</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <main>
+    <section class="w-full px-6 py-16 text-center select-none min-h-[calc(100vh-4rem)] grid place-items-center">
+      <div class="mx-auto">
+        <div class="mx-auto h-[18rem] w-[18rem] relative group">
+          <img src="assets/img/logo-una.png" alt="Logo UNA"
+               class="absolute inset-0 m-auto h-[12rem] w-[12rem] md:h-[14rem] md:w-[14rem] object-contain animate-spinSlower transition-opacity duration-150 group-hover:opacity-0">
+          <img src="assets/img/logo-una-negro.png" alt="Logo UNA negro"
+               class="absolute inset-0 m-auto h-[12rem] w-[12rem] md:h-[14rem] md:w-[14rem] object-contain animate-spinSlower opacity-0 transition-opacity duration-150 group-hover:opacity-100">
+        </div>
+
+        <h1 class="mt-10 text-3xl sm:text-4xl md:text-5xl tracking-wider uppercase hover:text-[#7F2D87] transition-colors"
+            style="font-family:'Recia','Switzer','system-ui',sans-serif; font-weight:900;">
+          UNIÓN NACIONAL DE ARTISTAS
+        </h1>
+
+        <p class="mt-6 text-[#4B5563] font-medium">© 2025</p>
+
+        <div class="mt-8">
+          <a href="#revista"
+  class="bg-[#fbeee0] border-2 border-[#422800] rounded-[40px] shadow-[3px_3px_0_0_#422800] text-[#422800] hover:text-white cursor-pointer inline-block font-semibold text-sm px-[12px] leading-[38px] text-center select-none md:min-w-[96px] md:px-[16px] hover:bg-[#F49C21] active:shadow-[1px_1px_0_0_#422800] active:translate-x-[2px] active:translate-y-[2px]"
+  role="button"
+>
+  Ver Revista
+</a>
+        </div>
+      </div>
+  </section>
+
+  <!-- REVISTA -->
+  <section id="revista" class="w-full">
+      <div class="sticky top-16 z-40 bg-black">
+        <div class="py-4 max-w-7xl mx-auto flex items-center justify-between px-6 border-y border-white/10 text-white">
+          <a href="#top" class="text-sm font-semibold"><!-- Flecha hacia arriba (SVG) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+  <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+</svg> Volver</a>
+          <div class="flex items-center gap-3">
+            <div class="relative group inline-block">
+              <button class="button-54" role="button" style="width:auto; font-size:14px; padding:0.20em 0.55em; border-width:2px">Todas las ediciones</button>
+              <div class="absolute left-1/2 -translate-x-1/2 top-full z-50 hidden group-hover:block group-focus-within:block">
+              <div class="bg-black revista-dropdown text-white rounded-xl shadow-xl ring-1 ring-white/10 border border-white/10 px-5 py-4 text-sm min-w-[300px]">
+                 
+                  <a href="#" data-url="https://online.fliphtml5.com/islablanca/xtbd" class="hover:underline block py-2 hover:underline text-lg font-semibold">Edición 1</a>
+           
+                  <a href="#" data-url="https://online.fliphtml5.com/islablanca/wswk/" class="hover:underline block py-2 hover:underline text-lg font-semibold">Edición 2</a>
+      
+                  <a href="#" data-url="https://online.fliphtml5.com/islablanca/xdsq/" class="hover:underline block py-2 hover:underline text-lg font-semibold">Edición 3</a>
+                  
+                  <a href="#" data-url="https://online.fliphtml5.com/islablanca/szku/" class="hover:underline block py-2 hover:underline text-lg font-semibold">Edición 4</a>
+
+                  <a href="#" data-url="https://online.fliphtml5.com/islablanca/ozxa/" class="hover:underline block py-2 hover:underline text-lg font-semibold">Edición 5</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <a id="revista-open" href="https://online.fliphtml5.com/jyqrl/jjwz/#p=2" target="_blank" rel="noopener" class="text-sm">Abrir en nueva pestaña</a>
+        </div>
+      </div>
+
+      <iframe id="revista-frame" class="frame"
+              src="https://online.fliphtml5.com/islablanca/ozxa/"
+              allowfullscreen loading="lazy"
+              title="UNA Revista"></iframe>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        var frame = document.getElementById('revista-frame');
+        var openLink = document.getElementById('revista-open');
+        var items = document.querySelectorAll('.revista-dropdown [data-url]');
+        var editionsBtn = document.querySelector('#revista .group button');
+        function setFrame(url){ if(frame){ frame.src = url; } if(openLink){ openLink.href = url; } }
+        items.forEach(function(a){
+          a.addEventListener('click', function(e){ e.preventDefault(); var u = a.getAttribute('data-url'); if(u){ setFrame(u); } });
+        });
+        if(openLink && frame){ openLink.href = frame.src; }
+
+        var hash = (location.hash || '').replace('#','');
+        if(hash === 'revista-ediciones'){
+          var section = document.getElementById('revista');
+          if(section){ section.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+          if(editionsBtn){ editionsBtn.focus(); }
+        }
+      });
+    </script>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="w-full border-t border-black/5 bg-white text-black">
+      <div class="max-w-5xl mx-auto px-12 md:px-24 py-16">
+        <h2 class="text-2xl sm:text-3xl font-black tracking-wide uppercase mb-4 text-black"
+            style="font-family:'Recia','Switzer','system-ui',sans-serif;">
+          Contacto
+        </h2>
+
+        
+
+        <div class="grid gap-y-6 gap-x-12 md:gap-x-20 sm:grid-cols-2">
+          <div class="space-y-2 text-sm">
+            <p>
+              <span class="font-semibold">Correo:</span>
+              <a href="mailto:contacto@unionnacionaldeartistas.cl" class="underline">
+                contacto@unionnacionaldeartistas.cl
+              </a>
+            </p>
+
+            <p>
+              <span class="font-semibold">Instagram:</span>
+              <a href="https://www.instagram.com/una.artistas/" target="_blank"
+                 rel="noopener" class="underline">@una.artistas</a>
+            </p>
+
+            <p>
+              <span class="font-semibold">Facebook:</span>
+              <a href="https://web.facebook.com/artistasuna" target="_blank"
+                 rel="noopener" class="underline">/artistasuna</a>
+            </p>
+
+            <p>
+              <span class="font-semibold">X:</span>
+              <a href="https://x.com/artistasuna" target="_blank"
+                 rel="noopener" class="underline">@artistasuna</a>
+            </p>
+          </div>
+
+          <div class="flex items-start justify-end -mt-8 md:-mt-10 pr-4 md:pr-8">
+            <img src="assets/img/logo-una.png" alt="Logo UNA" class="h-24 w-24 md:h-32 md:w-32 object-contain animate-spinSlower" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

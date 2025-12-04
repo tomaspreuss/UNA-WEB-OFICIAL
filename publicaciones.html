@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>UNA – Publicaciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CDN (igual que en el resto del sitio) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuentes opcionales -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+  </style>
+</head>
+<body class="bg-[#f5f5f5] text-gray-900">
+
+  <!-- NAVBAR MUY SIMPLE (puedes reemplazar por el de tu sitio) -->
+  <header class="sticky top-0 z-50 bg-black text-white">
+    <nav class="max-w-7xl mx-auto px-6 sm:px-8" style="font-family:'Switzer','system-ui','sans-serif;">
+      <div class="h-16 flex items-center justify-between">
+        <a href="index.html#top" class="group flex items-center gap-2 sm:gap-3">
+          <span class="tracking-wide font-black text-[12px] sm:text-sm select-none uppercase">UNIÓN NACIONAL DE ARTISTAS</span>
+          <img src="assets/img/logo-una.png" alt="Sol UNA" class="h-5 w-5 sm:h-6 sm:w-6 animate-spinSlower" />
+        </a>
+
+        <div class="flex items-center gap-6">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wide text-white/90">
+            <a href="index.html#top" class="hover:text-white transition">Inicio</a>
+            <a href="somos.html" class="hover:text-white transition">Somos</a>
+            <a href="actividades.html" class="hover:text-white transition">Actividades</a>
+            <a href="index.html#revista" class="hover:text-white transition">Revista</a>
+            <a href="index.html#contacto" class="hover:text-white transition">Contacto</a>
+          </div>
+
+          <div class="hidden sm:block h-4 w-px bg-white/30"></div>
+
+          <div class="hidden sm:flex items-center gap-4 text-white/90">
+            <a href="https://web.facebook.com/artistasuna" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/una.artistas/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="mailto:contacto@unionnacionaldeartistas.cl" aria-label="Mail" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" ry="2"/>
+                <polyline points="3 7 12 13 21 7"/>
+              </svg>
+            </a>
+            <a href="https://x.com/artistasuna" target="_blank" rel="noopener" aria-label="X" class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4l16 16"/><path d="M20 4 4 20"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 pb-16 pt-10">
+    <!-- ENCABEZADO -->
+    <section class="mb-10">
+      <p class="text-xs tracking-[0.32em] uppercase text-gray-400">UNA</p>
+      <h1 class="text-3xl sm:text-4xl font-black tracking-tight mt-2" style="font-family:'Recia','Switzer','system-ui',sans-serif;">PUBLICACIONES</h1>
+      <p class="mt-3 max-w-2xl text-sm text-gray-600">
+        Aquí podemos reunir columnas, cartas públicas, comunicados, documentos y otros materiales
+        descargables de la Unión Nacional de Artistas.
+      </p>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="mb-6">
+      <p class="text-xs font-semibold tracking-[0.16em] uppercase text-gray-500 mb-2">
+        FILTRAR POR:
+      </p>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <button data-filtro="Todos"
+                class="filtro-btn px-4 py-1.5 rounded-full border border-gray-300 bg-gray-900 text-white text-xs font-semibold">
+          Todos
+        </button>
+        <button data-filtro="Comunicado"
+                class="filtro-btn px-4 py-1.5 rounded-full border border-gray-300 bg-white text-xs text-gray-700">
+          Comunicados
+        </button>
+        <button data-filtro="Carta pública"
+                class="filtro-btn px-4 py-1.5 rounded-full border border-gray-300 bg-white text-xs text-gray-700">
+          Cartas públicas
+        </button>
+        <button data-filtro="Documento"
+                class="filtro-btn px-4 py-1.5 rounded-full border border-gray-300 bg-white text-xs text-gray-700">
+          Documentos
+        </button>
+      </div>
+    </section>
+
+    <!-- LISTA DE PUBLICACIONES (se llena con JS) -->
+    <section>
+      <div id="lista-publicaciones" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+  </main>
+
+  <script>
+    const publicaciones = [
+      {
+        tipo: "Actividad",
+        titulo: "Día del Libro junto a la Universidad Academia de Humanismo Cristiano",
+        texto: `En el marco de nuestra colaboración con la Universidad Academia de Humanismo Cristiano, el miércoles 23 de abril celebramos el Día del Libro y los Derechos de Autor y de Autora con la realización del Seminario “Mujeres en la Escritura”. La instancia fue moderada por Vivian Lavín, Presidenta de SADEL, y contó con la participación de las poetas Nadia Prado y Julieta Marchant, además de Georgina Odi, escritora y parte del Directorio de SECH.
+
+La actividad constituyó un espacio reflexivo en torno al rol de las mujeres en la literatura, así como también en torno los derechos intelectuales tras las obras.
+
+Tuvimos una actividad que, sin duda, inspiró a las y los asistentes a acercarse a los libros y disfrutar de la literatura.`,
+        imagenes: [
+          "assets/actividades/Actividad 1- Mujeres en la escritura/Gráfica.jpg",
+          "assets/actividades/Actividad 1- Mujeres en la escritura/Fotografía registro.jpg"
+        ]
+      },
+      {
+        tipo: "Actividad",
+        titulo: "Encuentro: En diálogo con los gremios",
+        texto: `El 6 de mayo la Sociedad de Escritores y Escritoras de Chile nos recibió para realizar nuestra jornada “Gremios en Diálogo”, un espacio que no sólo sirvió como reflexión en torno al estado del sector de las Artes, las Culturas y los Patrimonios, sino que también fue una instancia para que gremios y organizaciones de la UNA pudieran compartir. La actividad contó además con la presentación del sociólogo Tomás Peters sobre Democracia Cultural.
+
+Desde la UNA creemos que la unión gremial es fundamental para avanzar en políticas públicas que protejan y fortalezcan nuestra labor.
+
+¡Gracias a todas las organizaciones que fueron parte!`,
+        imagenes: [
+          "assets/actividades/Actividad 2- Gremios en diáologo/Gráfica.jpg",
+          "assets/actividades/Actividad 2- Gremios en diáologo/Fotografía registro.jpg"
+        ]
+      },
+      {
+        tipo: "Actividad",
+        titulo: "Seminario: Artes Escénicas e Institucionalidad Cultural",
+        texto: `El Sindicato de Actores y Actrices de Chile albergó el Seminario “Artes Escénicas e Institucionalidad Cultural” desarrollado el 24 de mayo, un espacio donde pudimos generar un diálogo respecto al estado actual de nuestras políticas públicas y culturales junto a los distintos gremios que conforman las artes escénicas.
+
+En la instancia participaron de la Mesa de Expertas, Ana María López del Sindicato de Actores y Actrices de Chile (SIDARTE), Marjorie Ávalos del Sindicato Nacional de Trabajadores Artistas de Danza (SINATTAD), y Carolina Pastén, Secretaria Ejecutiva de Artes Escénicas del Ministerio de las Culturas, las Artes y el Patrimonio. Además, fue moderada por Camila Casanova, productora y gestora cultural de la Unión Nacional de Artistas.`,
+        imagenes: [
+          "assets/actividades/Actividad 3- Artes escénicas e institucionalidad cultural/Gráfica.jpg",
+          "assets/actividades/Actividad 3- Artes escénicas e institucionalidad cultural/Fotografía registro"
+        ]
+      },
+      {
+        tipo: "Actividad",
+        titulo: "¡Firmamos convenio con el Museo Violeta Parra!",
+        texto: `En el marco del Encuentro “Patrimonio cultural. La pertinencia territorial en el desarrollo artístico, cultural y patrimonial”, el sábado 19 de julio se firmó un convenio de colaboración entre la Unión Nacional de Artistas (UNA) y el Museo Violeta Parra.
+
+La firma de este convenio constituye un hito que busca generar espacios e instancias que permitan implementar y desarrollar iniciativas orientadas a la promoción y difusión artística en sus más diversas expresiones. Esta colaboración se suscribe en el marco de las respectivas políticas institucionales, objetivos comunes y actividades complementarias de ambas instituciones, considerando su interés compartido en fortalecer los vínculos ya existentes y fomentar el trabajo colaborativo.
+
+La firma se llevó a cabo en el marco del Encuentro “Patrimonio cultural. La pertinencia territorial en el desarrollo artístico, cultural y patrimonial”, parte del Plan de Gestión que la Unión Nacional de Artistas viene desarrollando, involucrando a diversas organizaciones pertenecientes al sector de las culturas.
+
+La actividad fue moderado por Loreto Bravo, Directora ejecutiva de Balmaceda Arte Joven, y en el que participaron Denise Elphick, Directora del Museo Violeta Parra, Francisco Alvarado, Director Ejecutivo de El Circo del Mundo, y Ernesto Bravo, Director del Carnaval Histórico San Antonio de Padua.
+
+Agradecemos a quienes nos acompañaron y fueron parte de esta maravillosa instancia, que terminó con música a cargo de Las Comaires, baile y vituperio.`,
+        imagenes: [
+          "assets/actividades/Actividad 4- Patrimonio Cultural/Gráfica.jpg",
+          "assets/actividades/Actividad 4- Patrimonio Cultural/Fotografía registro.jpg"
+        ]
+      },
+      {
+        tipo: "Actividad",
+        titulo: "Seminario: Horizontes de la política cultural",
+        texto: `Con gran convocatoria realizamos nuestro Seminario “Horizontes de la política Cultural. Gestión, investigación y compromiso” junto a la Facultad de Artes de la Universidad Academia de Humanismo Cristiano, con la que la UNA mantiene un convenio vigente.
+
+La instancia contó con la participación de Bárbara Negrón, Directora del Observatorio de Políticas Culturales, Fabiola Leiva, investigadora y académica de la Universidad Academia de Humanismo Cristiano, y Fabián Retamal, Director de Extensión de la Universidad de Chile. Además, fue moderada por la Decana de la Facultad de Artes, Andrea Gutiérrez y contó con la asistencia de Álvaro Ramis, Rector de la Universidad. En un momento en que enfrentamos un grave retroceso en las políticas culturales del país, convocarnos a reflexionar sobre cuál es el rumbo a seguir, es fundamental y urgente.
+
+Si te lo perdiste, puedes ver el registro en este enlace: https://shorturl.at/NjaR6`,
+        imagenes: [
+          "assets/actividades/Actividad 5- Políticas culturales/Gráfica.jpg",
+          "assets/actividades/Actividad 5- Políticas culturales/Fotografía registro.jpg"
+        ]
+      },
+      {
+        tipo: "Actividad",
+        titulo: "Encuentro: El rol de la fotografía en la memoria histórica",
+        texto: `En el marco del Mes de la Fotografía, nos encontramos en Casa Foto para realizar el encuentro "El rol de la fotografía en la memoria histórica", una instancia de reflexión en torno a la imagen como herramienta fundamental de resguardo y proyección de las memorias.
+
+La actividad contó con la participación de Luis Navarro, Nicole Kramm y Jorge Brantmayer, y con la moderación de Mauricio Vergara, Director del espacio.
+
+Agradecemos a Casa Foto por recibirnos en su precioso espacio.`,
+        imagenes: [
+          "assets/actividades/Actividad 6- Fotografía/Gráfica.jpg",
+          "assets/actividades/Actividad 6- Fotografía/Fotografía registro.jpg"
+        ]
+      },
+      {
+        tipo: "Actividad",
+        titulo: "Seminario: Septiembre – cueca, circo, memoria y más",
+        texto: `En un tiempo de conmemoración y celebración de diversas expresiones culturales, desarrollamos nuestro Seminario “Septiembre: cueca, circo, memoria y más”. La instancia tuvo como propósito reflexionar en torno a las memorias e identidades que configuran la idiosincrasia nacional, vinculando expresiones artísticas y testimoniales con el ámbito cultural y la memoria histórica.
+La actividad convocó a un público diverso, propiciando un espacio de intercambio y reflexión colectiva sobre las memorias culturales y sociales del país. Contó, además, con la presencia de destacados panelistas: Rosa Ramírez, teatrista, representante del Gran Circo Teatro y Presidenta de la Fundación Andrés Pérez Araya, Marcelo Acevedo, Presidente del Sitio de Memoria Estadio Nacional, y el gran compositor dedicado al folclor chileno, Héctor Pavez.
+Entre las sorpresas de la jornada, se contó con el espectáculo de la acróbata, Valentina Puig, y Valentina Pavez, que emocionó con su cueca sola.
+Agradecemos a todas y todos quienes fueron parte, especialmente al Gran Circo Teatro por recibirnos en su precioso espacio, y compartirnos sus ricas sopaipillas.`,
+        imagenes: [
+          "assets/actividades/Actividad 7- Cueca/Gráfica.jpg",
+          "assets/actividades/Actividad 7- Cueca/Fotografía registro.jpg"
+        ]
+      },
+      {
+        tipo: "Actividad",
+        titulo: "Conversatorio: Desafíos del cine chileno ante su propio público",
+        texto: `El 29 de octubre, la Unión Nacional de Artistas junto al Centro de Arte Alameda y la Facultad de Artes de la Universidad Academia de Humanismo Cristiano, realizó el conversatorio “Desafíos del cine chileno ante su propio público”, un diálogo sobre los caminos, tensiones y desafíos del cine chileno contemporáneo.
+
+La actividad comenzó con la proyección de la película “Denominación de origen” y terminó con una interesante conversación moderada por Daniel Miranda, documentalista y parte de la directiva de ADOC, que contó además con la participación de Tomás Alzamora, Director de la película y de Roser Fort, Directora del Centro Arte Alameda.`,
+        imagenes: [
+          "assets/actividades/Actividad 8- Documental/Gráfica.jpg"
+        ]
+      },
+      {
+        tipo: "Actividad",
+        titulo: "Seminario: Derechos de Autor / Inteligencia Artificial",
+        texto: `El viernes 14 de noviembre vivimos una jornada imprescindible para el debate cultural en Chile.
+
+El seminario “Derechos de Autor/Inteligencia Artificial”, organizado por la Unión Nacional de Artistas (UNA) en colaboración con el Centro Cultural Gabriela Mistral (GAM), reunió a voces fundamentales para reflexionar sobre los desafíos que la IA plantea al mundo creativo. Un espacio necesario para pensar el futuro de los derechos de autor, la protección de las y los creadores, y las transformaciones que ya están ocurriendo en el ecosistema artístico y cultural.
+En la ocasión participaron Alejandra Martí, Directora Ejecutiva de GAM, Arturo Duclos, Artista visual y Director de CreaImagen, Juan Antonio Durán, Director General de SCD, y Felipe Schuster representando a ATN.
+
+Durante la conversación se abordaron temas clave como:
+• Los vacíos legales frente al uso de IA en procesos creativos
+• La urgencia de actualizar políticas públicas y marcos regulatorios
+• El rol de las organizaciones y comunidades artísticas frente a este nuevo escenario
+• La defensa de los derechos de autor como pilar para la sostenibilidad cultural
+
+Revive la actividad aquí: https://www.youtube.com/watch?v=DCElesi36KQ`,
+        imagenes: [
+          "assets/actividades/Actividad 9- Inteligencia Artificial/Gráfica.jpg",
+          "assets/actividades/Actividad 9- Inteligencia Artificial/Fotografía registro.jpg"
+        ]
+      }
+    ];
+
+    function renderPublicaciones() {
+      const contenedor = document.getElementById("lista-publicaciones");
+      contenedor.innerHTML = "";
+
+      publicaciones.forEach(pub => {
+        const tarjeta = document.createElement("article");
+        tarjeta.className = "bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4";
+
+        const encabezado = `
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.18em] text-gray-400">${pub.tipo}</p>
+            <h3 class="text-lg font-semibold mt-1">${pub.titulo}</h3>
+            <p class="text-sm text-gray-700 mt-2 whitespace-pre-line">${pub.texto}</p>
+          </div>
+        `;
+
+        const imagenesHtml = (pub.imagenes || []).length > 0
+          ? `
+            <div class="grid grid-cols-2 gap-3">
+              ${pub.imagenes.map((src, i) => `
+                <img src="${src}" alt="${pub.titulo} ${i+1}" class="w-full h-40 object-cover rounded-xl border border-gray-100" loading="lazy">
+              `).join("")}
+            </div>
+          `
+          : "";
+
+        tarjeta.innerHTML = encabezado + imagenesHtml;
+        contenedor.appendChild(tarjeta);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderPublicaciones();
+    });
+  </script>
+</body>
+</html>
