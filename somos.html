@@ -22,9 +22,35 @@
 
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet">
   <style>
-
     html, body { background:#000000 !important; color:#FFFFFF; }
     html { scroll-behavior:smooth; }
+    
+    /* Responsive fixes: Hide sol below 810px */
+    @media (max-width: 810px) {
+      /* Hide sol on smaller screens */
+      .animate-spinSlower {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 644px) {
+      /* Make the left logo group tighter (text only now) */
+      header nav .group.flex.items-center {
+        gap: 4px !important; 
+      }
+      /* Reduce text size slightly to make room */
+      header nav .group span {
+        font-size: 10px !important; 
+        letter-spacing: 0.02em !important;
+      }
+      /* Compress the menu items to the right to create air */
+      header nav .flex.items-center.gap-6 {
+        gap: 0.75rem !important; /* 12px */
+      }
+      header nav .flex.items-center.gap-6 a {
+        font-size: 9px !important;
+      }
+    }
     
     .button-54 {
       font-family: 'Switzer', system-ui, sans-serif;
@@ -171,7 +197,7 @@
         <div id="panel-que-somos" class="mt-8">
           <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
           <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4"
-              style="font-family:'Recia','Switzer','system-ui',sans-serif">QUE SOMOS</h1>
+              style="font-family:'Recia','Switzer','system-ui',sans-serif;">QUE SOMOS</h1>
           <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl">
             <br>
 La Unión Nacional de Artistas es una organización multigremial, conformada por diferentes gremios, sindicatos y sociedades de gestión, de artistas y creadores chilenos, de todas las disciplinas artísticas.
@@ -383,6 +409,21 @@ Fomentamos la organización del sector cultural.
                     <img src="assets/img/directores/Arturo Duclos.jpeg" alt="Arturo Duclos" class="h-[104px] w-[104px] mx-auto rounded-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='assets/img/logos-org/CreaImagen.jpg'">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Arturo Duclos</p>
                     <p class="text-xs text-gray-300 text-center">Crea Imagen</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/che sandoval.jpeg" alt="Ché Sandoval" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Ché Sandoval</p>
+                    <p class="text-xs text-gray-300 text-center">ADG</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Max Valdes.jpeg" alt="Max Valdés" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Max Valdés</p>
+                    <p class="text-xs text-gray-300 text-center">SADEL</p>
+                  </div>
+                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Francisco Alvarado.jpeg" alt="Francisco Alvarado" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Francisco Alvarado</p>
+                    <p class="text-xs text-gray-300 text-center">El Circo del Mundo - Chile</p>
                   </div>
                   <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
                     <img src="assets/img/directores/Ale-Jimenez.jpeg" alt="Alejandra Jiménez" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
