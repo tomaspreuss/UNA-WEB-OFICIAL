@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Somos — Unión Nacional de Artistas</title>
+  <link rel="icon" href="assets/img/logo-una.png" type="image/png">
 
   <meta name="robots" content="noindex,nofollow,noarchive" />
   <meta name="theme-color" content="#000000" />
@@ -126,7 +127,6 @@
       transform: translateY(0);
     }
 
-    #qs-organizaciones img { border-radius: 9999px; }
 
     #qs-directiva .p-4 img { transition: transform .2s ease; will-change: transform; }
     #qs-directiva .p-4:hover img { transform: scale(1.12); }
@@ -194,49 +194,129 @@
           <button data-tab="historia" data-active-color="#7F2D87" data-hover-color="#9CA3AF" class="tab-btn button-54 inline-flex items-center">Historia</button>
         </div>
 
-        <div id="panel-que-somos" class="mt-8">
-          <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
-          <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4"
-              style="font-family:'Recia','Switzer','system-ui',sans-serif;">QUE SOMOS</h1>
+        <div id="panel-que-somos" class="mt-20">
+          <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
+            <img src="assets/img/logo-una.png" alt="Sol UNA" class="h-8 w-8 sm:h-10 sm:w-10 animate-spinSlower" />
+            <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase"
+                style="font-family:'Recia','Switzer','system-ui',sans-serif;">QUE SOMOS</h1>
+            <button id="btn-qs-redes" class="button-54 inline-flex items-center !text-xs !px-3 !py-1 !border-2 !min-h-0 transition-all duration-300 hover:scale-105 hover:bg-[#E1306C] hover:shadow-[0_0_15px_rgba(225,48,108,0.5)]" style="height: auto; color: #FFFFFF; border-color: #E1306C;">Nuestras&nbsp;Redes</button>
+          </div>
+          
+          <div id="qs-texto">
+            <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-2xl mx-auto text-justify px-4 md:px-0">
+              <br>
+  La Unión Nacional de Artistas es una organización multigremial, conformada por diferentes gremios, sindicatos y sociedades de gestión, de artistas y creadores chilenos, de todas las disciplinas artísticas.
+  
+  Nace en 2012 con el objetivo de defender la libertad de creación y de expresión, con especial énfasis en la protección de los derechos de autor; el fomento al desarrollo y cultural del país; y la promoción del respeto a los derechos de los artistas y la dignidad de su oficio.
+  
+  La UNA es conducida por un Directorio, compuesto por 10 miembros representantes en partes iguales, de las organizaciones de gestión de derechos intelectuales y de las asociaciones gremiales de distintas disciplinas, entre ellas, literatura, música, teatro, artes audiovisuales, artes visuales y danza.
+            </p>
+          </div>
+
+          <div id="qs-redes" class="hidden mt-20">
+            <div class="flex flex-wrap w-full justify-center gap-12 sm:gap-16">
+              <!-- Facebook -->
+              <a href="https://web.facebook.com/artistasuna" target="_blank" rel="noopener" class="group flex flex-col items-center gap-2">
+                <div class="w-24 h-24 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#1877F2]/20 group-hover:border-[#1877F2] transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="text-[#1877F2] group-hover:text-[#1877F2] transition-colors" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                </div>
+                <span class="text-xs font-bold tracking-wider text-gray-400 group-hover:text-white uppercase">Facebook</span>
+              </a>
+  
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/una.artistas/" target="_blank" rel="noopener" class="group flex flex-col items-center gap-2">
+                <div class="w-24 h-24 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#E4405F]/20 group-hover:border-[#E4405F] transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#E4405F] group-hover:text-[#E4405F] transition-colors" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </div>
+                <span class="text-xs font-bold tracking-wider text-gray-400 group-hover:text-white uppercase">Instagram</span>
+              </a>
+  
+              <!-- YouTube -->
+              <a href="#" class="group flex flex-col items-center gap-2">
+                <div class="w-24 h-24 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#FF0000]/20 group-hover:border-[#FF0000] transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="text-[#FF0000] group-hover:text-[#FF0000] transition-colors" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </div>
+                <span class="text-xs font-bold tracking-wider text-gray-400 group-hover:text-white uppercase">YouTube</span>
+              </a>
+  
+              <!-- X -->
+              <a href="https://x.com/artistasuna" target="_blank" rel="noopener" class="group flex flex-col items-center gap-2">
+                <div class="w-24 h-24 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/20 group-hover:border-white transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="text-white group-hover:text-white transition-colors" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </div>
+                <span class="text-xs font-bold tracking-wider text-gray-400 group-hover:text-white uppercase">X</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-que-hacemos" class="mt-20 hidden">
+          <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
+            <img src="assets/img/logo-una.png" alt="Sol UNA" class="h-8 w-8 sm:h-10 sm:w-10 animate-spinSlower" />
+            <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase"
+                style="font-family:'Recia','Switzer','system-ui',sans-serif">QUÉ HACEMOS</h1>
+            <button id="btn-qh-dossier" class="button-54 inline-flex items-center !text-xs !px-3 !py-1 !border-2 !min-h-0 transition-all duration-300 hover:scale-105 hover:bg-[#F49C21] hover:shadow-[0_0_15px_rgba(244,156,33,0.5)]" style="height: auto; color: #FFFFFF; border-color: #F49C21;">Dossier</button>
+          </div>
+          
+          <div id="qh-texto">
+            <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-2xl mx-auto text-justify px-4 md:px-0">
+              <br>
+  Participamos activamente en el debate de políticas públicas destinadas al desarrollo del arte, la cultura y el patrimonio (Leyes de Derecho Autor y Propiedad Intelectual, 20% Música, Ley Teloneros, Derechos Conexos Actores, Ley Ricardo Larraín y Ley Balme, entre otras).
+  
+  Desarrollamos proyectos e iniciativas específicas de difusión artística y cultural, de fomento de la educación y del debate público en torno a las culturas.
+  
+  Generamos redes y acuerdos de colaboración.
+  
+  Fomentamos la organización del sector cultural.
+            </p>
+          </div>
+          
+          <!-- Visor Dossier -->
+          <div id="dossier-viewer" class="hidden mt-8 w-full border border-white/20 rounded-xl overflow-hidden bg-white/5 shadow-2xl">
+             <div class="p-3 flex justify-between items-center bg-white/5 border-b border-white/10">
+                <span class="text-xs font-semibold text-white/50 px-2">Vista previa del documento</span>
+                <a href="assets/documentos/Dossier-%20Uni%C3%B3n%20Nacional%20de%20Artistas%20VF%20dic%20.pdf" target="_blank" class="text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-white flex items-center gap-2 px-3 py-1 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
+                    Descargar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                </a>
+             </div>
+             <iframe src="assets/documentos/Dossier-%20Uni%C3%B3n%20Nacional%20de%20Artistas%20VF%20dic%20.pdf#navpanes=0&toolbar=0&view=FitH" class="w-full h-[600px] md:h-[800px] bg-white" title="Dossier UNA"></iframe>
+          </div>
+        </div>
+
+        <div id="panel-historia" class="mt-20 hidden">
+          <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
+            <img src="assets/img/logo-una.png" alt="Sol UNA" class="h-8 w-8 sm:h-10 sm:w-10 animate-spinSlower" />
+            <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase"
+                style="font-family:'Recia','Switzer','system-ui',sans-serif">HISTORIA</h1>
+          </div>
           <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl">
-            <br>
-La Unión Nacional de Artistas es una organización multigremial, conformada por diferentes gremios, sindicatos y sociedades de gestión, de artistas y creadores chilenos, de todas las disciplinas artísticas.
-
-Nace en 2012 con el objetivo de defender la libertad de creación y de expresión, con especial énfasis en la protección de los derechos de autor; el fomento al desarrollo y cultural del país; y la promoción del respeto a los derechos de los artistas y la dignidad de su oficio.
-
-La UNA es conducida por un Directorio, compuesto por 10 miembros representantes en partes iguales, de las organizaciones de gestión de derechos intelectuales y de las asociaciones gremiales de distintas disciplinas, entre ellas, literatura, música, teatro, artes audiovisuales, artes visuales y danza.
+            Próximamente...
           </p>
         </div>
 
-        <div id="panel-que-hacemos" class="mt-8 hidden">
-          <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
-          <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4"
-              style="font-family:'Recia','Switzer','system-ui',sans-serif">QUÉ HACEMOS</h1>
-          <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl">
-            <br>
-Participamos activamente en el debate de políticas públicas destinadas al desarrollo del arte, la cultura y el patrimonio (Leyes de Derecho Autor y Propiedad Intelectual, 20% Música, Ley Teloneros, Derechos Conexos Actores, Ley Ricardo Larraín y Ley Balme, entre otras).
 
-Desarrollamos proyectos e iniciativas específicas de difusión artística y cultural, de fomento de la educación y del debate público en torno a las culturas.
 
-Generamos redes y acuerdos de colaboración.
-
-Fomentamos la organización del sector cultural.
-          </p>
-        </div>
-
-        <div id="panel-historia" class="mt-8 hidden">
-          <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
-          <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4"
-              style="font-family:'Recia','Switzer','system-ui',sans-serif">HISTORIA</h1>
-          <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl">
-            Próximamente: contenido de la historia de la UNA.
-          </p>
-        </div>
-
-        <div id="panel-quienes-somos" class="mt-8 hidden">
-          <p class="text-xs uppercase tracking-[0.2em] text-[#9CA3AF] mb-3">UNA</p>
-          <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase mb-4 text-center whitespace-nowrap"
-              style="font-family:'Recia','Switzer','system-ui',sans-serif">QUIÉNES SOMOS</h1>
+        <div id="panel-quienes-somos" class="mt-20 hidden">
+          <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
+            <div class="flex items-center justify-center gap-4">
+              <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase whitespace-nowrap"
+                  style="font-family:'Recia','Switzer','system-ui',sans-serif">QUIÉNES SOMOS</h1>
+              <img src="assets/img/logo-una.png" alt="Sol UNA" class="h-8 w-8 sm:h-10 sm:w-10 animate-spinSlower" />
+            </div>
+          </div>
 <br>
 
           <div class="space-y-6">
@@ -250,111 +330,120 @@ Fomentamos la organización del sector cultural.
                 <h2 class="text-xl sm:text-2xl font-black uppercase mb-4" style="font-family:'Recia','Switzer','system-ui',sans-serif">Organizaciones</h2>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/ADCULTURA.jpg" alt="ADCULTURA" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/aclich.jpeg" alt="ACLICH" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">Asociación de Cantantes Líricos de Chile</p>
+                  </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/ADCULTURA.jpg" alt="ADCULTURA" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">ADCULTURA</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/ADG.jpg" alt="ADG" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5  ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/ADG.jpg" alt="ADG" class="max-h-24 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">ADG</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/ADOC.png" alt="ADOC" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/ADOC.png" alt="ADOC" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">ADOC</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/AFLACH.jpg" alt="AFLACH" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5  ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/AFLACH.jpg" alt="AFLACH" class="max-h-24 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">AFLACH</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/APECH.jpg" alt="APECH" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/APECH.jpg" alt="APECH" class="max-h-28 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
-                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">APECH</p>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">Asociación de Pintores <br> y Escultores de Chile</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/ATN.png" alt="ATN" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5  ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/ATN.png" alt="ATN" class="max-h-24 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">ATN</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/CONATEMUCH.png" alt="CONATEMUCH" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/CONATEMUCH.png" alt="CONATEMUCH" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">CONATEMUCH</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/CRIN.png" alt="CRIN" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/CRIN.png" alt="CRIN" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">CRIN</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/Centro Arte Alameda.png" alt="Centro Arte Alameda" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5  ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/Centro Arte Alameda.png" alt="Centro Arte Alameda" class="max-h-24 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">Centro Arte Alameda</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/CreaImagen.jpg" alt="CreaImagen" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-hidden relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/CreaImagen.jpg" alt="CreaImagen" class="max-h-40 max-w-full object-contain scale-150 translate-y-6 transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">CreaImagen</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/EL CIRCO DEL MUNDO.png" alt="EL CIRCO DEL MUNDO" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5  ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/EL CIRCO DEL MUNDO.png" alt="EL CIRCO DEL MUNDO" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">EL CIRCO DEL MUNDO</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/Fundación Títeres en Red.jpg" alt="Fundación Títeres en Red" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/Fundación Títeres en Red.jpg" alt="Fundación Títeres en Red" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">Fundación Títeres en Red</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/Letras Laicas.jpg" alt="Letras Laicas" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/Letras Laicas.jpg" alt="Letras Laicas" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">Letras Laicas</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/SADEL.jpg" alt="SADEL" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/SADEL.jpg" alt="SADEL" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">SADEL</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/SCD.jpg" alt="SCD" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/SCD.jpg" alt="SCD" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
+                      <div class="absolute bottom-4 inset-x-0 bg-white p-1 z-20">
+                        <p class="text-[8px] leading-tight text-black text-center font-bold uppercase">Sociedad Chilena de Autores <br> e Intérpretes Musicales</p>
+                      </div>
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">SCD</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/SECH.png" alt="SECH" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/SECH.png" alt="SECH" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">SECH</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/SIDARTE.webp" alt="SIDARTE" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/SIDARTE.webp" alt="SIDARTE" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">SIDARTE</p>
                   </a>
-                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <div class="h-16 bg-white rounded-md grid place-items-center">
-                      <img src="assets/img/logos-org/SINATTAD.jpg" alt="SINATTAD" class="max-h-16 max-w-full object-contain" loading="lazy">
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/SINATTAD.jpg" alt="SINATTAD" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">SINATTAD</p>
                   </a>
@@ -364,78 +453,89 @@ Fomentamos la organización del sector cultural.
               <div id="qs-directiva" class="hidden">
                 <h2 class="text-xs sm:text-sm font-black uppercase mb-4" style="font-family:'Recia','Switzer','system-ui',sans-serif">Directorio</h2>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Mario Rojas.jpeg" alt="Mario Rojas" class="h-24 w-24 mx-auto rounded-full object-cover" style="object-position:50% 70%" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Mario Rojas.jpeg" alt="Mario Rojas" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" style="object-position:50% 70%" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Mario Rojas</p>
                     <p class="text-xs text-gray-300 text-center">Presidente</p>
                     <p class="text-xs text-gray-300 text-center">SCD</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Jorge Calvo.jpeg" alt="Jorge Calvo" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Jorge Calvo.jpeg" alt="Jorge Calvo" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Jorge Calvo</p>
-                    <p class="text-xs text-gray-300 text-center">Vicepresidente</p>
+                    <p class="text-xs text-gray-300 text-center">1° Vicepresidente</p>
                     <p class="text-xs text-gray-300 text-center">SECH</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Beatriz Rosselot.JPG" alt="Beatriz Rosselot" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                                    <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Daniel Miranda.jpg" alt="Daniel Miranda" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <p class="mt-3 text-sm text-white text-center font-semibold">Daniel Miranda</p>
+                    <p class="text-xs text-gray-300 text-center">2° Vicepresidente</p>
+                    <p class="text-xs text-gray-300 text-center">ADOC</p>
+                  </div>
+
+
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Beatriz Rosselot.JPG" alt="Beatriz Rosselot" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Beatriz Rosselot</p>
                     <p class="text-xs text-gray-300 text-center">Secretaria</p>
                     <p class="text-xs text-gray-300 text-center">ATN</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Daniel Miranda.jpg" alt="Daniel Miranda" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
-                    <p class="mt-3 text-sm text-white text-center font-semibold">Daniel Miranda</p>
-                    <p class="text-xs text-gray-300 text-center">Vicepresidente</p>
-                    <p class="text-xs text-gray-300 text-center">ADOC</p>
-                  </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Alex Chellew.jpg" alt="Alex Chellew" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Alex Chellew.jpg" alt="Alex Chellew" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Alex Chellew</p>
                     <p class="text-xs text-gray-300 text-center">Tesorero</p>
-                    <p class="text-xs text-gray-300 text-center">APECH</p>
+                    <p class="text-xs text-gray-300 text-center">Asociación de Pintores <br> y Escultores de Chile</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/marjorie.jpeg" alt="Marjorie Ávalos" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/marjorie.jpeg" alt="Marjorie Ávalos" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Marjorie Ávalos</p>
                     <p class="text-xs text-gray-300 text-center">SINATTAD</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Ernesto Orellana.jpeg" alt="Ernesto Orellana" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Ernesto Orellana.jpeg" alt="Ernesto Orellana" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Ernesto Orellana</p>
                     <p class="text-xs text-gray-300 text-center">SIDARTE</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Arturo Duclos.jpeg" alt="Arturo Duclos" class="h-[104px] w-[104px] mx-auto rounded-full object-cover" loading="lazy" onerror="this.onerror=null; this.src='assets/img/logos-org/CreaImagen.jpg'">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Arturo Duclos.jpeg" alt="Arturo Duclos" class="h-[104px] w-[104px] mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" onerror="this.onerror=null; this.src='assets/img/logos-org/CreaImagen.jpg'">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Arturo Duclos</p>
                     <p class="text-xs text-gray-300 text-center">Crea Imagen</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/che sandoval.jpeg" alt="Ché Sandoval" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/che sandoval.jpeg" alt="Ché Sandoval" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Ché Sandoval</p>
                     <p class="text-xs text-gray-300 text-center">ADG</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Max Valdes.jpeg" alt="Max Valdés" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Max Valdes.jpeg" alt="Max Valdés" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Max Valdés</p>
                     <p class="text-xs text-gray-300 text-center">SADEL</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Francisco Alvarado.jpeg" alt="Francisco Alvarado" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Francisco Alvarado.jpeg" alt="Francisco Alvarado" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Francisco Alvarado</p>
                     <p class="text-xs text-gray-300 text-center">El Circo del Mundo - Chile</p>
                   </div>
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Christian Navarrete .jpeg" alt="Christian Navarrete" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
+                  <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                    <img src="assets/img/directores/Christian Navarrete .jpeg" alt="Christian Navarrete" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
                     <p class="mt-3 text-sm text-white text-center font-semibold">Christian Navarrete</p>
                     <p class="text-xs text-gray-300 text-center">ACLICH</p>
                   </div>
                 </div>
 
-                <h2 class="text-xs sm:text-sm font-black uppercase mt-10 mb-4" style="font-family:'Recia','Switzer','system-ui',sans-serif">DIRECCIÓN EJECUTIVA</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 pb-32">
-                  <div class="p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
-                    <img src="assets/img/directores/Ale-Jimenez.jpeg" alt="Alejandra Jiménez" class="h-24 w-24 mx-auto rounded-full object-cover" loading="lazy">
-                    <p class="mt-3 text-sm text-white text-center font-semibold">Alejandra Jiménez</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-10 pb-32">
+                  <div>
+                    <h2 class="text-xs sm:text-sm font-black uppercase mb-4" style="font-family:'Recia','Switzer','system-ui',sans-serif">DIRECCIÓN EJECUTIVA</h2>
+                    <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                      <img src="assets/img/directores/Ale-Jimenez.jpeg" alt="Alejandra Jiménez" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                      <p class="mt-3 text-sm text-white text-center font-semibold">Alejandra   Jiménez</p>
+                    </div>
+                  </div>
+                  <div>
+                    <h2 class="text-[9px] sm:text-sm font-black uppercase mb-4 whitespace-nowrap tracking-tight" style="font-family:'Recia','Switzer','system-ui',sans-serif">ENCARGADA DE COMUNICACIONES</h2>
+                    <div class="group p-4 bg-white/5 rounded-lg ring-1 ring-white/10">
+                      <img src="assets/img/directores/Catalina Tapia.png" alt="Catalina Tapia" class="h-24 w-24 mx-auto rounded-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                      <p class="mt-3 text-sm text-white text-center font-semibold">Catalina   Tapia</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -461,9 +561,99 @@ Fomentamos la organización del sector cultural.
         'organizaciones': document.getElementById('qs-organizaciones'),
         'directiva': document.getElementById('qs-directiva')
       };
+      
+      // Elements for "Nuestras Redes" sub-toggle in "Qué Somos"
+      var btnQsRedes = document.getElementById('btn-qs-redes');
+      var qsTexto = document.getElementById('qs-texto');
+      var qsRedes = document.getElementById('qs-redes');
+
+      // Helper to reset Qué Somos to text view
+      function resetQueSomos() {
+        if(qsTexto && qsRedes && btnQsRedes) {
+          qsTexto.classList.remove('hidden');
+          qsRedes.classList.add('hidden');
+          // Reset button style to inactive/default
+          btnQsRedes.style.color = '#FFFFFF';
+          btnQsRedes.style.backgroundColor = 'transparent';
+          btnQsRedes.style.borderColor = '#E1306C';
+        }
+      }
+
+      // Helper to show Nuestras Redes
+      function showNuestrasRedes() {
+        if(qsTexto && qsRedes && btnQsRedes) {
+          qsTexto.classList.add('hidden');
+          qsRedes.classList.remove('hidden');
+          // Set button style to active
+          btnQsRedes.style.color = '#FFFFFF';
+          btnQsRedes.style.backgroundColor = '#E1306C';
+          btnQsRedes.style.borderColor = '#E1306C';
+        }
+      }
+      
+      // Toggle logic for the button
+      if(btnQsRedes){
+        btnQsRedes.addEventListener('click', function(){
+          // Check if redes is currently visible
+          if(!qsRedes.classList.contains('hidden')){
+            resetQueSomos();
+          } else {
+            showNuestrasRedes();
+          }
+        });
+      }
+
+      // Elements for "Dossier" toggle in "Qué Hacemos"
+      var btnQhDossier = document.getElementById('btn-qh-dossier');
+      var qhTexto = document.getElementById('qh-texto');
+      var dossierViewer = document.getElementById('dossier-viewer');
+
+      function resetQueHacemos() {
+        if(qhTexto && dossierViewer && btnQhDossier) {
+          qhTexto.classList.remove('hidden');
+          dossierViewer.classList.add('hidden');
+          btnQhDossier.style.color = '#FFFFFF';
+          btnQhDossier.style.backgroundColor = 'transparent';
+          btnQhDossier.style.borderColor = '#F49C21';
+        }
+      }
+
+      function showDossier() {
+        if(qhTexto && dossierViewer && btnQhDossier) {
+          qhTexto.classList.add('hidden');
+          dossierViewer.classList.remove('hidden');
+          btnQhDossier.style.color = '#FFFFFF';
+          btnQhDossier.style.backgroundColor = '#F49C21';
+          btnQhDossier.style.borderColor = '#F49C21';
+        }
+      }
+
+      if(btnQhDossier){
+        btnQhDossier.addEventListener('click', function(){
+          if(!dossierViewer.classList.contains('hidden')){
+            resetQueHacemos();
+          } else {
+            showDossier();
+          }
+        });
+      }
 
       function showMain(name){
         tabsSection.classList.remove('hidden');
+        // Reset Que Somos view whenever navigating main tabs
+        if(name !== 'que-somos') {
+             // If we leave que-somos, reset it so next time it's text
+             resetQueSomos();
+        } else {
+             // If we enter que-somos, make sure text is default? 
+             // Or keep state? Usually reset is better UX unless persisted.
+             // Let's reset to be safe, unless hash specifically asks for it (handled in setFromHash)
+             resetQueSomos();
+        }
+        
+        // Reset Que Hacemos view whenever navigating main tabs
+        resetQueHacemos();
+
         Object.keys(panels).forEach(function(k){
           var el = panels[k];
           if(!el) return;
@@ -522,6 +712,14 @@ Fomentamos la organización del sector cultural.
           showMain(hash);
           return;
         }
+        // Special case for nuestras-redes hash if user wants to link directly?
+        // The user didn't ask for it, but good practice.
+        if(hash === 'nuestras-redes') {
+             showMain('que-somos');
+             showNuestrasRedes();
+             return;
+        }
+        
         if(hash==='organizaciones' || hash==='directiva'){
           showMain('quienes-somos');
           showSub(hash);
