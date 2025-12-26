@@ -23,7 +23,16 @@
 
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet">
   <style>
-    html, body { background:#000000 !important; color:#FFFFFF; }
+    html, body { color:#FFFFFF; }
+    body {
+      background-color:#000000;
+      background-image: linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)), linear-gradient(rgba(127,45,135,0.45), rgba(127,45,135,0.45)), url('assets/img/fondos/fondo2.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-blend-mode: normal;
+    }
     html { scroll-behavior:smooth; }
     
     /* Responsive fixes: Hide sol below 810px */
@@ -127,15 +136,19 @@
       transform: translateY(0);
     }
 
-
     #qs-directiva .p-4 img { transition: transform .2s ease; will-change: transform; }
     #qs-directiva .p-4:hover img { transform: scale(1.12); }
+
   </style>
 </head>
 
 <body class="bg-black font-sans antialiased" id="top">
+  <div id="historia-bg" class="fixed inset-0 z-0 pointer-events-none hidden">
+    <video id="bg-video-historia" class="w-full h-full object-cover" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <div class="absolute inset-0" style="background-image:linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)), linear-gradient(rgba(127,45,135,0.45), rgba(127,45,135,0.45));"></div>
+  </div>
   <!-- NAVBAR (mismo en todas las páginas) -->
-  <header class="sticky top-0 z-50 bg-[#7F2D87] text-white">
+  <header class="sticky top-0 z-50 bg-[#7F2D87]/70 backdrop-blur-sm text-white">
     <nav class="max-w-7xl mx-auto px-6 sm:px-8" style="font-family:'Switzer','system-ui','sans-serif;">
       <div class="h-16 flex items-center justify-between">
         <a href="index.html#top" class="group flex items-center gap-2 sm:gap-3">
@@ -184,9 +197,9 @@
     </nav>
   </header>
 
-  <main>
-    <section id="tabs-somos" class="w-full bg-black">
-      <div class="max-w-5xl mx-auto px-6 pt-16">
+  <main class="relative z-10">
+    <section id="tabs-somos" class="w-full bg-transparent relative z-10">
+      <div class="max-w-7xl mx-auto px-6 pt-16">
         <div class="flex flex-wrap justify-center gap-3 text-base font-semibold uppercase tracking-wide">
           <button data-tab="que-somos" data-active-color="#7F2D87" data-hover-color="#7F2D87" class="tab-btn button-54 inline-flex items-center">Qué&nbsp;somos</button>
           <button data-tab="que-hacemos" data-active-color="#F49C21" data-hover-color="#F49C21" class="tab-btn button-54 inline-flex items-center">Qué&nbsp;hacemos</button>
@@ -202,7 +215,7 @@
             <button id="btn-qs-redes" class="button-54 inline-flex items-center !text-xs !px-3 !py-1 !border-2 !min-h-0 transition-all duration-300 hover:scale-105 hover:bg-[#E1306C] hover:shadow-[0_0_15px_rgba(225,48,108,0.5)]" style="height: auto; color: #FFFFFF; border-color: #E1306C;">Nuestras&nbsp;Redes</button>
           </div>
           
-          <div id="qs-texto" class="mt-8">
+          <div id="qs-texto" class="mt-8 bg-transparent">
             <p class="text-sm sm:text-base font-medium md:font-semibold text-gray-200 leading-relaxed max-w-2xl mx-auto text-justify px-4 md:px-0">
               • Unión Nacional de Artistas, es una organización multigremial, conformada por diferentes gremios, sindicatos y sociedades de gestión, de artistas y creadores chilenos, de todas las disciplinas artísticas.
             </p>
@@ -271,7 +284,7 @@
           
           <div id="qh-texto" class="mt-8">
             <p class="text-sm sm:text-base font-medium md:font-semibold text-gray-200 leading-relaxed max-w-2xl mx-auto text-justify px-4 md:px-0">
-              • Participamos activamente en el debate de las políticas públicas destinadas al desarrollo del arte, la cultura y el patrimonio. También, colaboramos en leyes como: Leyes de Derecho Autor y Propiedad Intelectual, 20% Música, Ley Teloneros, Ley de Artes Escénicas, Ley Ricardo Larraín, Ley Balme, Ley Tommy Rey, entre otras.
+              • Participamos activamente en el debate de las políticas públicas destinadas al desarrollo del arte, la cultura y el patrimonio. También, colaboramos en leyes como: Leyes de Derecho Autor y Propiedad Intelectual, 20% Música, Ley Teloneros, Ley de Artes Escénicas, Ley Ricardo Larraín, Ley Balmes, Ley Tommy Rey, entre otras.
             </p>
             <p class="text-sm sm:text-base font-medium md:font-semibold text-gray-200 leading-relaxed max-w-2xl mx-auto text-justify px-4 md:px-0 mt-4">
               • Desarrollamos proyectos e iniciativas específicas de difusión artística y cultural, de fomento de la educación y del debate público en torno a las culturas.
@@ -302,12 +315,20 @@
         <div id="panel-historia" class="mt-20 hidden">
           <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
             <img src="assets/img/logo-una.png" alt="Sol UNA" class="h-8 w-8 sm:h-10 sm:w-10 animate-spinSlower" />
-            <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase"
+            <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase text-[#7F2D87]"
                 style="font-family:'Recia','Switzer','system-ui',sans-serif">HISTORIA</h1>
           </div>
-          <p class="text-sm sm:text-base text-gray-200 leading-relaxed max-w-3xl mt-8">
-            Próximamente...
+          <p class="text-sm sm:text-base font-medium md:font-semibold text-gray-200 leading-relaxed max-w-2xl mx-auto text-center px-4 md:px-0">
+            Desde 2012, la UNA ha impulsado el diálogo cultural y la organización gremial,
+            construyendo una historia marcada por colaboración, defensa de derechos y memoria.
           </p>
+          <div id="historia-roll" class="mt-8">
+            <div class="relative w-full h-[60vh] md:h-[70vh] rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5 shadow-2xl">
+              <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none"></div>
+              <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none"></div>
+              <div id="historia-roll-track" class="absolute inset-0 flex items-center gap-6 will-change-transform z-10"></div>
+            </div>
+          </div>
         </div>
 
 
@@ -417,7 +438,7 @@
                   </a>
                   <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
                     <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
-                      <img src="assets/img/logos-org/SADEL.jpg" alt="SADEL" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
+                      <img src="assets/img/logos-org/SADEL.png" alt="SADEL" class="max-h-40 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">SADEL</p>
                   </a>
@@ -677,6 +698,17 @@
             b.style.borderColor = '#FFFFFF';
           }
         });
+        var bgWrap = document.getElementById('historia-bg');
+        if(name==='historia'){
+          if(bgWrap) bgWrap.classList.remove('hidden');
+          tabsSection.classList.remove('bg-black');
+          tabsSection.classList.add('bg-transparent');
+          initHistoriaRoll();
+        } else {
+          if(bgWrap) bgWrap.classList.add('hidden');
+          tabsSection.classList.remove('bg-transparent');
+          tabsSection.classList.add('bg-transparent');
+        }
         if(name==='quienes-somos'){
           showSub('organizaciones');
         }
@@ -701,6 +733,73 @@
             b.style.borderColor = '#FFFFFF';
           }
         });
+      }
+
+      function initHistoriaRoll(){
+        var container = document.getElementById('historia-roll');
+        if(!container || container.getAttribute('data-initialized')) return;
+        var track = document.getElementById('historia-roll-track');
+        if(!track) return;
+        var data = [
+          { src:'assets/convenios/1. Museo Violeta Parra/Registro firma.jpg', titulo:'Firma de convenio', sub:'Museo Violeta Parra', fecha:'19 Jul 2025' },
+          { src:'assets/convenios/2. Universidad Academia Humanismo Cristiano/Registro firma.jpg', titulo:'Colaboración académica', sub:'Universidad Academia de Humanismo Cristiano', fecha:'23 Abr 2025' },
+          { src:'assets/convenios/3. Observatorio de Políticas Culturales/Registro firma.jpg', titulo:'Alianza estratégica', sub:'Observatorio de Políticas Culturales', fecha:'May 2025' },
+          { src:'assets/convenios/6. Museo de la Memoria y los Derechos Humanos/Registro firma.jpg', titulo:'Memoria y derechos', sub:'Museo de la Memoria y los DDHH', fecha:'2025' },
+          { src:'assets/convenios/7. GAM/Registro firma.jpg', titulo:'Convenio cultural', sub:'Centro Cultural GAM', fecha:'Nov 2025' }
+        ];
+        var palette = ['#7F2D87','#F49C21','#F2D245','#9CA3AF'];
+        var tiles = [];
+        function makeTile(d, idx){
+          var col = palette[idx % palette.length];
+          var w = window.innerWidth < 640 ? 260 : 380;
+          var tile = document.createElement('div');
+          tile.className = 'relative shrink-0 rounded-xl overflow-hidden ring-1 ring-white/10 bg-black/20';
+          tile.style.width = w+'px';
+          tile.style.height = '75%';
+          tile.innerHTML = ''
+            + '<img src="'+d.src+'" alt="'+d.titulo+'" class="absolute inset-0 w-full h-full object-cover" loading="lazy">'
+            + '<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>'
+            + '<div class="absolute top-2 left-2 z-20">'
+            +   '<div class="px-2 py-1 rounded bg-black/50 backdrop-blur-sm text-[10px] font-bold tracking-wide ring-1 ring-white/30 text-white">'+d.fecha+'</div>'
+            + '</div>'
+            + '<div class="absolute bottom-0 inset-x-0 p-3 md:p-4">'
+            +   '<div class="bg-black/40 backdrop-blur-sm rounded-lg p-3 ring-1 ring-white/10 mx-auto w-fit text-center">'
+            +     '<h3 class="text-sm md:text-base font-black" style="color:'+col+'">'+d.titulo+'</h3>'
+            +     '<p class="text-[11px] md:text-xs mt-1" style="color:'+col+'">'+d.sub+'</p>'
+            +   '</div>'
+            + '</div>';
+          return tile;
+        }
+        var sequence = data.concat(data);
+        sequence.forEach(function(d, idx){ var t = makeTile(d, idx); tiles.push(t); track.appendChild(t); });
+        var gapPx = parseFloat(getComputedStyle(track).gap) || 24;
+        function firstRunWidth(){
+          var total = 0;
+          for(var i=0;i<data.length;i++){
+            total += tiles[i].offsetWidth;
+            if(i>0) total += gapPx;
+          }
+          return total;
+        }
+        var x = 0;
+        var last = performance.now();
+        var speed = 0.06;
+        function step(ts){
+          var dt = ts - last; last = ts;
+          x -= speed * dt;
+          var width = firstRunWidth();
+          if(-x >= width){ x += width; }
+          track.style.transform = 'translateX('+x+'px)';
+          requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        window.addEventListener('resize', function(){
+          tiles.forEach(function(t){
+            var w = window.innerWidth < 640 ? 260 : 380;
+            t.style.width = w+'px';
+          });
+        });
+        container.setAttribute('data-initialized','1');
       }
 
       function setFromHash(){
@@ -787,6 +886,19 @@
 
       window.addEventListener('hashchange', setFromHash);
       setFromHash();
+      var bgVideo = document.getElementById('bg-video-historia');
+      if(bgVideo){
+        bgVideo.playbackRate = 0.6;
+        bgVideo.addEventListener('loadedmetadata', function(){ bgVideo.playbackRate = 0.6; });
+        var primary = 'assets/img/videos/video artistico historia 2.mp4';
+        var fallback = 'assets/img/video artistico historia 2.mp4';
+        bgVideo.src = fallback;
+        try {
+          fetch(primary, { method: 'HEAD' }).then(function(r){
+            if(r.ok){ bgVideo.src = primary; }
+          }).catch(function(){ /* keep fallback */ });
+        } catch(e){ /* keep fallback */ }
+      }
     });
   </script>
 </body>
