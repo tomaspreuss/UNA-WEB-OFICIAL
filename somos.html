@@ -286,7 +286,6 @@
             <img src="assets/img/logo-una.png" alt="Sol UNA" class="h-8 w-8 sm:h-10 sm:w-10 animate-spinSlower" />
             <h1 class="text-3xl sm:text-4xl font-black tracking-wide uppercase"
                 style="font-family:'Recia','Switzer','system-ui',sans-serif">QUÉ HACEMOS</h1>
-            <button id="btn-qh-dossier" class="button-54 inline-flex items-center !text-xs !px-3 !py-1 !border-2 !min-h-0 transition-all duration-300 hover:scale-105 hover:bg-[#F49C21] hover:shadow-[0_0_15px_rgba(244,156,33,0.5)]" style="height: auto; color: #FFFFFF; border-color: #F49C21;">Dossier</button>
           </div>
           
           <div id="qh-texto" class="mt-8">
@@ -302,20 +301,6 @@
             <p class="text-sm sm:text-base font-medium md:font-semibold text-gray-200 leading-relaxed max-w-2xl mx-auto text-justify px-4 md:px-0 mt-4">
               • Fomentamos al sector cultural a organizarse y a poner en valor sus derechos y a visibilizar el arte como una herramienta de transformación social.
             </p>
-          </div>
-          
-          <!-- Visor Dossier -->
-          <div id="dossier-viewer" class="hidden mt-8 w-full border border-white/20 rounded-xl overflow-hidden bg-white/5 shadow-2xl">
-             <div class="p-3 flex justify-between items-center bg-white/5 border-b border-white/10">
-                <span class="text-xs font-semibold text-white/50 px-2">Vista previa del documento</span>
-                <a href="assets/documentos/Dossier-%20Uni%C3%B3n%20Nacional%20de%20Artistas%20VOF%20.pdf" target="_blank" class="text-xs font-bold uppercase tracking-wider text-gray-400 hover:text-white flex items-center gap-2 px-3 py-1 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
-                    Descargar
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                </a>
-             </div>
-             <iframe src="assets/documentos/Dossier-%20Uni%C3%B3n%20Nacional%20de%20Artistas%20VOF%20.pdf#navpanes=0&toolbar=0&view=FitH" class="w-full h-[600px] md:h-[800px] bg-white" title="Dossier UNA"></iframe>
           </div>
         </div>
 
@@ -481,6 +466,12 @@
                     </div>
                     <p class="mt-3 text-xs text-gray-300 group-hover:underline">SINATTAD</p>
                   </a>
+                  <a href="#" class="group block p-4 bg-white/5 rounded-lg ring-1 ring-white/10 relative hover:z-[100] overflow-visible">
+                    <div class="h-40 bg-white grid place-items-center overflow-visible relative transition-transform duration-500 group-hover:scale-150 z-20">
+                      <img src="assets/img/logos-org/SITMUCH.jpg" alt="SITMUCH" class="max-h-12 max-w-full object-contain transition-transform duration-500 relative z-10" loading="lazy">
+                    </div>
+                    <p class="mt-3 text-xs text-gray-300 group-hover:underline">SITMUCH</p>
+                  </a>
                 </div>  
               </div>
 
@@ -637,41 +628,6 @@
         });
       }
 
-      // Elements for "Dossier" toggle in "Qué Hacemos"
-      var btnQhDossier = document.getElementById('btn-qh-dossier');
-      var qhTexto = document.getElementById('qh-texto');
-      var dossierViewer = document.getElementById('dossier-viewer');
-
-      function resetQueHacemos() {
-        if(qhTexto && dossierViewer && btnQhDossier) {
-          qhTexto.classList.remove('hidden');
-          dossierViewer.classList.add('hidden');
-          btnQhDossier.style.color = '#FFFFFF';
-          btnQhDossier.style.backgroundColor = 'transparent';
-          btnQhDossier.style.borderColor = '#F49C21';
-        }
-      }
-
-      function showDossier() {
-        if(qhTexto && dossierViewer && btnQhDossier) {
-          qhTexto.classList.add('hidden');
-          dossierViewer.classList.remove('hidden');
-          btnQhDossier.style.color = '#FFFFFF';
-          btnQhDossier.style.backgroundColor = '#F49C21';
-          btnQhDossier.style.borderColor = '#F49C21';
-        }
-      }
-
-      if(btnQhDossier){
-        btnQhDossier.addEventListener('click', function(){
-          if(!dossierViewer.classList.contains('hidden')){
-            resetQueHacemos();
-          } else {
-            showDossier();
-          }
-        });
-      }
-
       function showMain(name){
         tabsSection.classList.remove('hidden');
         // Reset Que Somos view whenever navigating main tabs
@@ -685,9 +641,6 @@
              resetQueSomos();
         }
         
-        // Reset Que Hacemos view whenever navigating main tabs
-        resetQueHacemos();
-
         Object.keys(panels).forEach(function(k){
           var el = panels[k];
           if(!el) return;
